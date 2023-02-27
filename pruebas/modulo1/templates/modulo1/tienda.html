@@ -1,0 +1,25 @@
+{% extends 'modulo1/main.html'%} {% load static %}
+
+{% block contenido %} 
+
+<div class="container-fluid pt-5">
+  
+<div class="row bg-white pt-1" id="container3">
+  <h1 class=" text-center text-black">Todos Nuestros Productos Al Mejor Precio $$$</h1>
+  {% for producto in productos %}
+
+        <div class="col-lg-4 pt-4">
+            <img class="thumbnail" src="{{producto.imagen.url}}" style="height: 150px"/>
+            <div class="box-element product">
+                <h6><strong>{{producto.nombre}}</strong></h6>
+                <p>{{producto.descripcion}}</p>
+                <strong>${{producto.precio|floatformat:0}}</strong>
+                <hr />
+                <button class="btn btn-primary">Agregar al carro</button>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
+</div>
+{% endblock contenido %}

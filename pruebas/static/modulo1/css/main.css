@@ -1,0 +1,119 @@
+body {
+  background-repeat: no-repeat;
+  background-image: url(../images/hd-wallpaper-7651002_1920.jpg);
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+h6{
+  color: rgb(0, 0, 0);
+  text-shadow: white;
+}
+
+#container1{
+background-color: rgba(0, 0, 0, 0.441);
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: rgb(1, 220, 1);
+}
+
+
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+
+.page-section1 {
+  background-color: #00000085;
+  border-radius: 50px;
+}
+
+#heroe {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+}
+
+#botones {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+#card-border {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.card {
+  margin-right: 30px;
+}
+
+#imagen2{
+  transition: all .2s;
+}
+
+#imagen2:hover {
+  transform: scale(1.1) rotate(10deg);
+  cursor: pointer;
+  /* agranda la imagen en un 10% y la rota 2 grados hacia la izquierda */
+}
+
+#imagen3 {
+  src: url(../images/perrito2.jpg);
+}
+
+#imagen3:hover {
+  src: url("../images/perrito3.jpg");
+
+}
+
+.thumbnail{
+  transition: all .2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+
+}
+
+#boton1{
+  background-color: rgb(63, 206, 50);
+  color: white;
+}
+#boton1:hover {
+  color: black;
+  background-color: rgb(50, 206, 201);
+  transform: scale(1.1);
+}
+
+
+#contenedor1{
+  background-color: rgba(0, 0, 0, 0.253);
+}
+#container2{
+  background-color: rgb(252, 252, 252);
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+#container3{
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #fe0000;
+  border-color: #007bff;
+}

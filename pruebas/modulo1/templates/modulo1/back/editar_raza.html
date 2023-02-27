@@ -1,0 +1,26 @@
+{% extends 'modulo1/main.html' %} {% load static %} {% block contenido %}
+{% load crispy_forms_tags %}
+<div class="row" <div class="col-12 col-md-6 offset-md-3">
+
+    <div class="card">
+        <div class="card-body">
+            <h2> Editar raza </h2>
+            
+            <a  class="btn btn-outline-dark" href="{% url 'historia' %}">&#x2190; Volver a tienda</a>
+            <hr>
+            <form action="" class="formulario_producto" method="post" enctype="multipart/form-data">
+
+                {% csrf_token %} {{ form | crispy}}
+
+                <div class="d-flex justify-content-end">
+                    <input type="reset" value="Cancelar" class="btn btn-secondary"> &nbsp;
+                    <input type="submit" value="Editar" class="btn btn-primary">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock%}

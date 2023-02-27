@@ -1,0 +1,17 @@
+
+{% extends 'modulo1/main.html'%} {% load static %} {% block contenido %}
+<div class="row" id="containerseba">
+  <h1 class="text-center text-black">Mundo perritos</h1>
+  {% for raza in razas %}
+
+  <div class="col-lg-4 text-center">
+    <img class="thumbnail" src="{{raza.imagen.url}}" style="height: 150px" />
+    <div class="box-element raza">
+      <h6><strong>{{raza.nombre}}</strong></h6>
+      <h6><strong>{{raza.categoria}}</strong></h6>
+      <h6><strong>${{raza.precio}}</strong></h6>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock contenido %}
