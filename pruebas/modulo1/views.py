@@ -37,13 +37,13 @@ def home(request):
         'raza_formulario': raza_formulario,
         'razas': razas,
     }
-    return render(request, 'modulo1/home.html', data)
+    return render(request, 'modulo1/front/home.html', data)
 
 
 def tienda(request):
     productos = Producto.objects.all()
     context = {'productos': productos}
-    return render(request, 'modulo1/tienda.html', context)
+    return render(request, 'modulo1/front/tienda.html', context)
 
 @permission_required('modulo1.add_raza')
 def listar(request):
@@ -53,12 +53,12 @@ def listar(request):
     data = {
         'razas' : razas
     }
-    return render(request, 'modulo1/listar.html', data)
+    return render(request, 'modulo1/back/listar.html', data)
 
 def historia(request):
     razas = Raza.objects.all()
     context = {'razas': razas} 
-    return render(request, 'modulo1/historia.html', context);
+    return render(request, 'modulo1/front/historia.html', context);
 
 def registro(request):
 

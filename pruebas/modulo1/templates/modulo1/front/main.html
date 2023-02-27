@@ -89,25 +89,6 @@
             {% endif %}
 
 
-            <li class="nav-item dropdown">
-              <!--  data-bs-toggle="dropdown" esto genera que el enlace razas quede en negro al estar activo-->
-              <a
-                class="nav-link dropdown-toggle"
-                href="{% url 'historia' %}"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Razas
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Pequeños</a></li>
-                <li><a class="dropdown-item" href="#">Medianos</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Grandes</a></li>
-              </ul>
-            </li>
-
             {% if not request.user.is_authenticated %}
             <li class="nav-item">
               <a
