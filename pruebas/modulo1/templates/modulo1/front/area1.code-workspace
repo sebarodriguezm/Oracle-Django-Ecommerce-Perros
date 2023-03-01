@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../react-node-express-mysql"
+		},
+		{
+			"path": "../../../../../../../cosas necesarias programacion/django/garden_store-main"
+		},
+		{
+			"name": "Oracle-Django-Ecommerce-Perros",
+			"path": "../../../../../../../Oracle-Django-Ecommerce-Perros"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
