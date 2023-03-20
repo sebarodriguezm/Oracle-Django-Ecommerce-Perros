@@ -3,8 +3,18 @@
 {% block contenido %} 
 
 <div class="container-fluid pt-5">
-  
+   
+
 <div class="row bg-white pt-1" id="container3">
+
+    {% if request.user.is_authenticated %} {% include "carro/widget.html" %}
+
+    <a href="{% url 'home' %}" class="btn btn-success">Comprar</a> {% else %}
+    <br/>
+    <div class="alert alert-danger text-center"> Logueate para ver el carro
+    </div>
+    {% endif %}
+
   <h1 class=" text-center text-black">Todos Nuestros Productos Al Mejor Precio $$$</h1>
   {% for producto in productos %}
 
@@ -15,7 +25,7 @@
                 <p>{{producto.descripcion}}</p>
                 <strong>${{producto.precio|floatformat:0}}</strong>
                 <hr />
-                <button class="btn btn-primary">Agregar al carro</button>
+                <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carro</a>
             </div>
         </div>
 

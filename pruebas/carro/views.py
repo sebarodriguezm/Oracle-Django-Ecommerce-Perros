@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .carro import Carro
-from store.models import Producto
+from modulo1.models import Producto
 from django.shortcuts import redirect
 # Create your views here.
 
@@ -11,7 +11,7 @@ def agregar_producto(request, producto_id):
     
     producto= Producto.objects.get(id=producto_id)
     carro.agregar(producto=producto)
-    return redirect("store")
+    return redirect("tienda")
 
 def eliminar_producto(request, producto_id):
     
@@ -19,7 +19,7 @@ def eliminar_producto(request, producto_id):
     
     producto= Producto.objects.get(id=producto_id)
     carro.eliminar(producto=producto)
-    return redirect("store")
+    return redirect("tienda")
 
 def restar_producto(request, producto_id):
     
