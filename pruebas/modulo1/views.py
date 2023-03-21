@@ -48,10 +48,10 @@ def tienda(request):
 @permission_required('modulo1.add_raza')
 def listar(request):
     
-    razas = Raza.objects.all()
+    productos = Producto.objects.all()
     
     data = {
-        'razas' : razas
+        'productos' : productos
     }
     return render(request, 'modulo1/back/listar.html', data)
 
