@@ -83,13 +83,13 @@ def registro(request):
 @permission_required('modulo1.add_raza')
 def editar_raza(request, id):
     
-    raza = get_object_or_404(Raza, id = id)
+    producto = get_object_or_404(Producto, id = id)
     data = {
-        'form': RazaForm(instance = raza)
+        'form': ProductoForm(instance = producto)
     }
     
     if request.method == 'POST':
-        formulario= RazaForm(data=request.POST, instance=raza, files=request.FILES)
+        formulario= ProductoForm(data=request.POST, instance=producto, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             messages.success(request, "Producto modificado correctamente")
@@ -100,9 +100,9 @@ def editar_raza(request, id):
 
 @permission_required('modulo1.add_raza')
 def eliminar_raza(request, id):
-    razas= get_object_or_404(Raza, id= id)
-    razas.delete()
-    messages.success(request, "raza eliminado correctamente")
+    productos= get_object_or_404(Producto, id= id)
+    productos.delete()
+    messages.success(request, "producto eliminado correctamente")
     return redirect(to="listar")
 
 @permission_required('modulo1.add_raza')
